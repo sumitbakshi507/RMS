@@ -17,6 +17,7 @@ using RMS.JobPostEngine.Domain.Events;
 using RMS.JobPostEngine.Domain.EventHandlers;
 using RMS.JobPostEngine.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
 namespace RMS.JobPostEngine.Api
 {
@@ -36,6 +37,9 @@ namespace RMS.JobPostEngine.Api
             {
                 options.UseSqlServer(Configuration.GetConnectionString("JobPostEngineDbConnection"));
             });
+
+            services.Configure<KestrelServerOptions>(
+                Configuration.GetSection("Kestrel"));
 
             services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 

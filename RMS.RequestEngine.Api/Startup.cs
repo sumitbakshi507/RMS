@@ -15,6 +15,7 @@ using RMS.RequestEngine.Data.Context;
 using Swashbuckle.AspNetCore.Swagger;
 using MediatR;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 
 namespace RMS.RequestEngine.Api
 {
@@ -34,6 +35,9 @@ namespace RMS.RequestEngine.Api
             {
                 options.UseSqlServer(Configuration.GetConnectionString("RequestEngineDbConnection"));
             });
+
+            services.Configure<KestrelServerOptions>(
+                Configuration.GetSection("Kestrel"));
 
             services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
