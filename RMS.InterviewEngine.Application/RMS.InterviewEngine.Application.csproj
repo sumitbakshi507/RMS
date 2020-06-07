@@ -5,11 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="2.9.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\RMS.Domain.Core\RMS.Domain.Core.csproj" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

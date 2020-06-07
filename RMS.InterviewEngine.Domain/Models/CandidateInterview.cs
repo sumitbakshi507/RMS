@@ -16,6 +16,8 @@ namespace RMS.InterviewEngine.Domain.Models
 
         public int InterviewStatus { get; set; }
 
+        public int InterviewType { get; set; }
+
         public string Feedback { get; set; }
 
         public string Interviewer { get; set; }

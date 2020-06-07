@@ -16,7 +16,7 @@ namespace RMS.RequestEngine.Api
         {
             Log.Logger = new LoggerConfiguration()
             .Enrich.FromLogContext()
-            .WriteTo.Console()
+            .WriteTo.ColoredConsole()
             .CreateLogger();
 
             CreateHostBuilder(args).Build().Run();

@@ -1,4 +1,5 @@
-﻿using RMS.CandidateEngine.Domain.Events;
+﻿using RMS.CandidateEngine.Domain.Commands;
+using RMS.CandidateEngine.Domain.Events;
 using RMS.CandidateEngine.Domain.Interfaces;
 using RMS.CandidateEngine.Domain.Models;
 using RMS.Domain.Core.Bus;
@@ -71,6 +72,10 @@ namespace RMS.CandidateEngine.Domain.EventHandlers
                     Source = @event.Source,
                     ReceivedDate = DateTime.UtcNow
                 });
+
+                var createScreeningCommand = new CreateScreeningCommand(jobCandidateId);
+
+                _bus.SendCommand(createScreeningCommand);
             }
 
             return Task.CompletedTask;

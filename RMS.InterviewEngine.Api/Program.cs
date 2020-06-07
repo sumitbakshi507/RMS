@@ -8,17 +8,16 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 
-namespace RMS.CandidateEngine.Api
+namespace RMS.InterviewEngine.Api
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-               .Enrich.FromLogContext()
-               .WriteTo.ColoredConsole()
-               .CreateLogger();
-
+            .Enrich.FromLogContext()
+            .WriteTo.ColoredConsole()
+            .CreateLogger();
             CreateHostBuilder(args).Build().Run();
         }
 

@@ -11,10 +11,13 @@ using RMS.CandidateEngine.Domain.Events;
 using RMS.CandidateEngine.Domain.Interfaces;
 using RMS.Domain.Core.Bus;
 using RMS.Infra.Bus;
+using RMS.InterviewEngine.Application.Contracts;
+using RMS.InterviewEngine.Application.Services;
 using RMS.InterviewEngine.Data.Context;
 using RMS.InterviewEngine.Data.Repository;
 using RMS.InterviewEngine.Domain.CommandHandlers;
 using RMS.InterviewEngine.Domain.Commands;
+using RMS.InterviewEngine.Domain.EventHandlers;
 using RMS.InterviewEngine.Domain.Interfaces;
 using RMS.JobPostEngine.Application.Contracts;
 using RMS.JobPostEngine.Application.Services;
@@ -53,18 +56,21 @@ namespace RMS.Infra.IoC
             services.AddTransient<JobCreatedEventHandler>();
             services.AddTransient<PublishWebsitePostEventHandler>();
             services.AddTransient<ResumeReceivedEventHandler>();
+            services.AddTransient<CreateScreeningEventHandler>();
 
             //Domain Events
             services.AddTransient<IEventHandler<ManpowerRequestCreatedEvent>, ManpowerRequestEventHandler>();
             services.AddTransient<IEventHandler<RMS.JobPostEngine.Domain.Events.JobCreatedEvent>, JobCreatedEventHandler>();
             services.AddTransient<IEventHandler<PublishWebsitePostEvent>, PublishWebsitePostEventHandler>();
             services.AddTransient<IEventHandler<ResumeReceivedEvent>, ResumeReceivedEventHandler>();
+            services.AddTransient<IEventHandler<RMS.InterviewEngine.Domain.Events.CreateScreeningEvent>, CreateScreeningEventHandler>();
 
             //Domain Commands
             services.AddTransient<IRequestHandler<CreateJobCommand, bool>, CreateJobCommandHandler>();
             services.AddTransient<IRequestHandler<PublishWebsitePostCommand, bool>, PublishWebsitePostCommandHandler>();
             services.AddTransient<IRequestHandler<NotifyCommand, bool>, NotifyCommandHandler>();
             services.AddTransient<IRequestHandler<ResumeReceivedCommand, bool>, ResumeReceivedCommandHandler>();
+            services.AddTransient<IRequestHandler<CreateScreeningCommand, bool>, CreateScreeningCommandHandler>();
             services.AddTransient<IRequestHandler<HireCommand, bool>, HireCommandHandler>();
             services.AddTransient<IRequestHandler<RejectCommand, bool>, RejectCommandHandler>();
             services.AddTransient<IRequestHandler<SelectCommand, bool>, SelectCommandHandler>();
@@ -73,6 +79,7 @@ namespace RMS.Infra.IoC
             services.AddTransient<IManpowerRequestService, ManpowerRequestService>();
             services.AddTransient<IJobService, JobService>();
             services.AddTransient<ICandidateService, CandidateService>();
+            services.AddTransient<IInterviewService, InterviewService>();
 
             //Data
             services.AddTransient<IManpowerRequestRepository, ManpowerRequestRepository>();
