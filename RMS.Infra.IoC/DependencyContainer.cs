@@ -1,11 +1,21 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using RMS.CandidateEngine.Application.Contracts;
+using RMS.CandidateEngine.Application.Services;
+using RMS.CandidateEngine.Data.Context;
+using RMS.CandidateEngine.Data.Repository;
 using RMS.CandidateEngine.Domain.CommandHandlers;
 using RMS.CandidateEngine.Domain.Commands;
 using RMS.CandidateEngine.Domain.EventHandlers;
 using RMS.CandidateEngine.Domain.Events;
+using RMS.CandidateEngine.Domain.Interfaces;
 using RMS.Domain.Core.Bus;
 using RMS.Infra.Bus;
+using RMS.InterviewEngine.Data.Context;
+using RMS.InterviewEngine.Data.Repository;
+using RMS.InterviewEngine.Domain.CommandHandlers;
+using RMS.InterviewEngine.Domain.Commands;
+using RMS.InterviewEngine.Domain.Interfaces;
 using RMS.JobPostEngine.Application.Contracts;
 using RMS.JobPostEngine.Application.Services;
 using RMS.JobPostEngine.Data.Context;
@@ -54,18 +64,28 @@ namespace RMS.Infra.IoC
             services.AddTransient<IRequestHandler<CreateJobCommand, bool>, CreateJobCommandHandler>();
             services.AddTransient<IRequestHandler<PublishWebsitePostCommand, bool>, PublishWebsitePostCommandHandler>();
             services.AddTransient<IRequestHandler<NotifyCommand, bool>, NotifyCommandHandler>();
+            services.AddTransient<IRequestHandler<ResumeReceivedCommand, bool>, ResumeReceivedCommandHandler>();
+            services.AddTransient<IRequestHandler<HireCommand, bool>, HireCommandHandler>();
+            services.AddTransient<IRequestHandler<RejectCommand, bool>, RejectCommandHandler>();
+            services.AddTransient<IRequestHandler<SelectCommand, bool>, SelectCommandHandler>();
 
             //Application Services
             services.AddTransient<IManpowerRequestService, ManpowerRequestService>();
             services.AddTransient<IJobService, JobService>();
+            services.AddTransient<ICandidateService, CandidateService>();
 
             //Data
             services.AddTransient<IManpowerRequestRepository, ManpowerRequestRepository>();
             services.AddTransient<IJobRepository, JobRepository>();
             services.AddTransient<IJobPostRepository, JobPostRepository>();
             services.AddTransient<IExternalSystemRepository, ExternalSystemRepository>();
+            services.AddTransient<ICandidateRepository, CandidateRepository>();
+            services.AddTransient<IJobCandidateRepository, JobCandidateRepository>();
+            services.AddTransient<ICandidateInterviewRepository, CandidateInterviewRepository>();
             services.AddTransient<RequestEngineDbContext>();
             services.AddTransient<JobPostEngineDbContext>();
+            services.AddTransient<CandidateEngineDbContext>();
+            services.AddTransient<InterviewEngineDbContext>();
         }
     }
 }

@@ -37,11 +37,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{33D2DB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterviewEngine", "InterviewEngine", "{EE4644AC-65B6-4CBC-AA6F-96C41BA33A1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.RequestEngine.Domain", "RMS.RequestEngine.Domain\RMS.RequestEngine.Domain.csproj", "{D4598A6B-57D4-4191-BF91-E6613939084B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.RequestEngine.Domain", "RMS.RequestEngine.Domain\RMS.RequestEngine.Domain.csproj", "{D4598A6B-57D4-4191-BF91-E6613939084B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.RequestEngine.Data", "RMS.RequestEngine.Data\RMS.RequestEngine.Data.csproj", "{DCBC0B04-DEBF-44AA-8161-81C94ED61888}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.RequestEngine.Data", "RMS.RequestEngine.Data\RMS.RequestEngine.Data.csproj", "{DCBC0B04-DEBF-44AA-8161-81C94ED61888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.RequestEngine.Application", "RMS.RequestEngine.Application\RMS.RequestEngine.Application.csproj", "{9B8E9EA1-83CA-43C4-A176-FD5D25CD5CE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.RequestEngine.Application", "RMS.RequestEngine.Application\RMS.RequestEngine.Application.csproj", "{9B8E9EA1-83CA-43C4-A176-FD5D25CD5CE9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{5E877596-9D80-4F68-9A81-91F18E49B3C1}"
 EndProject
@@ -51,15 +51,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0E56C2AB-7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{73C70727-453E-4562-AE24-C192F6A2EE7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.JobPostEngine.Domain", "RMS.JobPostEngine.Domain\RMS.JobPostEngine.Domain.csproj", "{1D24AA31-5961-41FA-901D-61A092E9C6CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.JobPostEngine.Domain", "RMS.JobPostEngine.Domain\RMS.JobPostEngine.Domain.csproj", "{1D24AA31-5961-41FA-901D-61A092E9C6CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.RequestEngine.Api", "RMS.RequestEngine.Api\RMS.RequestEngine.Api.csproj", "{6D2533C4-7FB8-408F-9F28-86A41978C6E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.RequestEngine.Api", "RMS.RequestEngine.Api\RMS.RequestEngine.Api.csproj", "{6D2533C4-7FB8-408F-9F28-86A41978C6E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.JobPostEngine.Data", "RMS.JobPostEngine.Data\RMS.JobPostEngine.Data.csproj", "{43E945ED-1E43-4BAF-B28F-66DD3885B6A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.JobPostEngine.Data", "RMS.JobPostEngine.Data\RMS.JobPostEngine.Data.csproj", "{43E945ED-1E43-4BAF-B28F-66DD3885B6A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.JobPostEngine.Application", "RMS.JobPostEngine.Application\RMS.JobPostEngine.Application.csproj", "{55AB00D5-D24B-4B13-ABA9-FF6F862959E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.JobPostEngine.Application", "RMS.JobPostEngine.Application\RMS.JobPostEngine.Application.csproj", "{55AB00D5-D24B-4B13-ABA9-FF6F862959E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.JobPostEngine.Api", "RMS.JobPostEngine.Api\RMS.JobPostEngine.Api.csproj", "{E930B6D6-AE4F-4C14-BD9D-21F1DE0AB679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.JobPostEngine.Api", "RMS.JobPostEngine.Api\RMS.JobPostEngine.Api.csproj", "{E930B6D6-AE4F-4C14-BD9D-21F1DE0AB679}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{266B4986-8675-417F-A10C-7E72D3E3A2E7}"
 EndProject
@@ -69,9 +69,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{D6F445DB-658A-4F4A-B9DC-D0FF5C3B51D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.CandidateEngine.Api", "RMS.CandidateEngine.Api\RMS.CandidateEngine.Api.csproj", "{FCDBBF59-04AF-4FB2-9D3B-D7EB9B819E24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.CandidateEngine.Api", "RMS.CandidateEngine.Api\RMS.CandidateEngine.Api.csproj", "{FCDBBF59-04AF-4FB2-9D3B-D7EB9B819E24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.CandidateEngine.Domain", "RMS.CandidateEngine.Domain\RMS.CandidateEngine.Domain.csproj", "{DBA96B5D-A74A-469C-86E8-880824B1E969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.CandidateEngine.Domain", "RMS.CandidateEngine.Domain\RMS.CandidateEngine.Domain.csproj", "{DBA96B5D-A74A-469C-86E8-880824B1E969}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{862B4940-E482-4F94-BCE0-17AAF9146A03}"
 EndProject
@@ -81,9 +81,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{333B39F2-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{13C81B76-DF68-4D12-86C5-324D9485B6F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.InterviewEngine.Domain", "RMS.InterviewEngine.Domain\RMS.InterviewEngine.Domain.csproj", "{B7933266-DAAA-41C2-8FEC-D251ABD9EF7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.InterviewEngine.Domain", "RMS.InterviewEngine.Domain\RMS.InterviewEngine.Domain.csproj", "{B7933266-DAAA-41C2-8FEC-D251ABD9EF7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.InterviewEngine.Data", "RMS.InterviewEngine.Data\RMS.InterviewEngine.Data.csproj", "{433B644F-9B73-4ACD-984B-5C31A6C0B7E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RMS.InterviewEngine.Data", "RMS.InterviewEngine.Data\RMS.InterviewEngine.Data.csproj", "{433B644F-9B73-4ACD-984B-5C31A6C0B7E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.CandidateEngine.Data", "RMS.CandidateEngine.Data\RMS.CandidateEngine.Data.csproj", "{C55F7DE3-B9BA-4F5F-8D70-B177FA64DE7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS.CandidateEngine.Application", "RMS.CandidateEngine.Application\RMS.CandidateEngine.Application.csproj", "{68477BEA-B1A1-471D-AB6B-7D23E605456A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,6 +155,14 @@ Global
 		{433B644F-9B73-4ACD-984B-5C31A6C0B7E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{433B644F-9B73-4ACD-984B-5C31A6C0B7E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{433B644F-9B73-4ACD-984B-5C31A6C0B7E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C55F7DE3-B9BA-4F5F-8D70-B177FA64DE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55F7DE3-B9BA-4F5F-8D70-B177FA64DE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55F7DE3-B9BA-4F5F-8D70-B177FA64DE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55F7DE3-B9BA-4F5F-8D70-B177FA64DE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68477BEA-B1A1-471D-AB6B-7D23E605456A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68477BEA-B1A1-471D-AB6B-7D23E605456A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68477BEA-B1A1-471D-AB6B-7D23E605456A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68477BEA-B1A1-471D-AB6B-7D23E605456A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -192,6 +204,8 @@ Global
 		{13C81B76-DF68-4D12-86C5-324D9485B6F3} = {EE4644AC-65B6-4CBC-AA6F-96C41BA33A1C}
 		{B7933266-DAAA-41C2-8FEC-D251ABD9EF7E} = {13C81B76-DF68-4D12-86C5-324D9485B6F3}
 		{433B644F-9B73-4ACD-984B-5C31A6C0B7E6} = {333B39F2-D913-4361-9AA9-4B471C5635E7}
+		{C55F7DE3-B9BA-4F5F-8D70-B177FA64DE7B} = {EC5F8FA4-9EB4-4EEB-982F-B78C62385A96}
+		{68477BEA-B1A1-471D-AB6B-7D23E605456A} = {3C30B11B-0E5D-4417-8FD3-841B3C4B0EDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {080A84DF-3E12-4260-9BF5-CA6F4D3A316F}

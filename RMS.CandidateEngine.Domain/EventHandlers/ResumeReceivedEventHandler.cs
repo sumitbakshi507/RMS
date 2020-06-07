@@ -4,6 +4,7 @@ using RMS.CandidateEngine.Domain.Models;
 using RMS.Domain.Core.Bus;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,7 @@ namespace RMS.CandidateEngine.Domain.EventHandlers
 
         public Task Handle(ResumeReceivedEvent @event)
         {
+            const string filePath = "./Files/";
             var candidate = _candidateRepository.GetCandidate(@event.Email, @event.Mobile);
             int candidateId;
             if (candidate == null)
@@ -37,7 +39,8 @@ namespace RMS.CandidateEngine.Domain.EventHandlers
                 {
                     Email = @event.Email,
                     Mobile = @event.Mobile,
-                    ResumeUrl = @event.ResumeUrl
+                    ResumeUrl = @event.ResumeUrl,
+                    CoverLetter = @event.CoverLetter
                 });
             }
             else {
@@ -45,6 +48,17 @@ namespace RMS.CandidateEngine.Domain.EventHandlers
                 candidateId = candidate.Id;
                 _candidateRepository.Update(candidate);
             }
+            if (!Directory.Exists($"{filePath}{candidateId}"))
+            {
+                Directory.CreateDirectory($"{filePath}{candidateId}");
+            }
+
+            File.Move($"{filePath}{@event.ResumeUrl}", $"{filePath}{candidateId}/{@event.FileName}", true);
+
+            candidate = _candidateRepository.GetCandidate(candidateId);
+            candidate.ResumeUrl = $"{filePath}{candidateId}/{@event.FileName}";
+
+            _candidateRepository.Update(candidate);
 
             var jobCandidate = _jobCandidateRepository.GetJobCandidate(@event.JobPostId, candidateId);
             int jobCandidateId;
@@ -53,7 +67,9 @@ namespace RMS.CandidateEngine.Domain.EventHandlers
                 {
                     CandidateId = candidateId,
                     JobPostId = @event.JobPostId,
-                    CandidateStatus = CandidateStatusEnum.New
+                    CandidateStatus = CandidateStatusEnum.New,
+                    Source = @event.Source,
+                    ReceivedDate = DateTime.UtcNow
                 });
             }
 

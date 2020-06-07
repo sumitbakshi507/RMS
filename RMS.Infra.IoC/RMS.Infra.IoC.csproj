@@ -10,9 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RMS.CandidateEngine.Application\RMS.CandidateEngine.Application.csproj" />
+    <ProjectReference Include="..\RMS.CandidateEngine.Data\RMS.CandidateEngine.Data.csproj" />
     <ProjectReference Include="..\RMS.CandidateEngine.Domain\RMS.CandidateEngine.Domain.csproj" />
     <ProjectReference Include="..\RMS.Domain.Core\RMS.Domain.Core.csproj" />
     <ProjectReference Include="..\RMS.Infra.Bus\RMS.Infra.Bus.csproj" />
+    <ProjectReference Include="..\RMS.InterviewEngine.Data\RMS.InterviewEngine.Data.csproj" />
+    <ProjectReference Include="..\RMS.InterviewEngine.Domain\RMS.InterviewEngine.Domain.csproj" />
     <ProjectReference Include="..\RMS.JobPostEngine.Application\RMS.JobPostEngine.Application.csproj" />
     <ProjectReference Include="..\RMS.JobPostEngine.Data\RMS.JobPostEngine.Data.csproj" />
     <ProjectReference Include="..\RMS.JobPostEngine.Domain\RMS.JobPostEngine.Domain.csproj" />

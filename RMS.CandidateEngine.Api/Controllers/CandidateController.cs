@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RMS.CandidateEngine.Application.Contracts;
+using RMS.CandidateEngine.Application.Models;
 
 namespace RMS.CandidateEngine.Api.Controllers
 {
@@ -13,17 +17,28 @@ namespace RMS.CandidateEngine.Api.Controllers
     {
         private readonly ILogger<CandidateController> _logger;
 
-        public CandidateController(ILogger<CandidateController> logger)
+        private readonly ICandidateService _candidateService;
+
+        public CandidateController(
+            ICandidateService candidateService,
+            ILogger<CandidateController> logger)
         {
+            _candidateService = candidateService;
             _logger = logger;
         }
 
         [HttpGet]
-        public IEnumerable<String> Get()
+        public IEnumerable<JobCandidateVM> GetByJobPost(int jobPostId)
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => index.ToString())
-            .ToArray();
+            return _candidateService.GetByJobPost(jobPostId);
+        }
+
+        [HttpPost]
+        [Route("UpdateProfile")]
+        public async Task<IActionResult> UpdateProfile(
+            [FromForm]PublicPostVM request)
+        {
+            return Ok(await _candidateService.AddRequest(request));
         }
     }
 }
